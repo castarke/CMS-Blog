@@ -2,7 +2,11 @@ const router = require('express').Router();
 const { Post, User } = require('../models');
  
 router.get('/', async (req, res) => {
-    try{ 
+    try{  
+        // console.log('homepage route reached')
+        // const response = await
+        // fetch('http://localhost:3001/api/posts')
+        // const postData = await response.json()
         const postData = await Post.findAll({
             attributes:[
                 'id',
@@ -18,13 +22,19 @@ router.get('/', async (req, res) => {
                 ]
             
         });
-        const posts = postData.map((singlePost) =>
-        singlePost.get({plain: true}));
-        res.render('homepage',{
-            posts, 
-            logged_in: req.session.logged_in
-        })
+        console.log('post data: ', postData.body)
+        const posts = postData.map( singlePost => singlePost.get({plain: true}))
+        // console.log(posts)
+        res.status(200).json(posts)
+        // console.log('posts: ', posts)
+        // res.status(200).json(postData)
+        // res.render('homepage',{
+        //     posts, 
+        //     logged_in: req.session.logged_in
+        // })
     } catch(err){
+        console.log('There was an Error')
+        console.log(err)
         res.status(500).json(err)
     }
 });
