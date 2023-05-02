@@ -11,10 +11,10 @@
 <body>
     <header id="navheader" class="text-white">
        {{!-- {{console.log(login)}} --}}
-        {{#if logIn}}
+        {{#if login}}
             <a href="/">Home</a>
             <a href="/dashboard">Dashboard</a>
-            <a href="/api/user/logout">Logout</a>
+            <button id ="logout">Logout</button>
         {{else}}
             <a href="/">Home</a>
             <a href="/dashboard">Dashboard</a>
@@ -25,4 +25,5 @@
         {{{body}}}
     </main>
 </body>
+<script src="/js/logout.js"></script>
 </html>
