@@ -1,7 +1,7 @@
 <h1>The Tech Blog</h1>
-{{#each blogs}}
+{{#each post as |post|}}
   <section class="card">
-    <a href="/blogs/{{id}}" class="card-body">
+    <a href="/posts/{{id}}" class="card-body">
         <h3 class="card-title">{{title}}</h3> 
         <h5>Posted by {{user.name}} on {{createdAt}}</h5>
         <p class="card-text">{{content}}</p>

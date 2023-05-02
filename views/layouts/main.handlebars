@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Blog</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/CMS-Blog/public/css/style.cs">
+    <link rel="jass" href="/CMS-Blog/public/css/jass.css">
 </head>
 <body>
     <header id="navheader" class="text-white">
         <section></section>
         {{#if loggedIn}}
-            <a href="/">Home</a>
+            <a href="homepage">Home</a>
             <a href="/dashboard">Dashboard</a>
             <a href="/api/users/logout">Logout</a>
         {{else}}
-            <a href="/">Home</a>
+            <a href="homepage">Home</a>
             <a href="/dashboard">Dashboard</a>
             <a href="/login">Login</a>
         {{/if}}  

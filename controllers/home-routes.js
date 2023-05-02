@@ -22,16 +22,15 @@ router.get('/', async (req, res) => {
                 ]
             
         });
-        console.log('post data: ', postData.body)
         const posts = postData.map( singlePost => singlePost.get({plain: true}))
         // console.log(posts)
         res.status(200).json(posts)
         // console.log('posts: ', posts)
         // res.status(200).json(postData)
-        // res.render('homepage',{
-        //     posts, 
-        //     logged_in: req.session.logged_in
-        // })
+        res.render('homepage',{
+            posts, 
+            logged_in: req.session.logged_in
+        })
     } catch(err){
         console.log('There was an Error')
         console.log(err)
