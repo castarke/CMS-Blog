@@ -1,4 +1,4 @@
-let oldPost = document.querySelector("#oldPost")
+let post = document.querySelector("#post")
 let newPost = document.querySelector("#newPost")
 let create = document.querySelector("#create")
 
@@ -15,9 +15,9 @@ newPost.addEventListener("submit",event => {
     }
     const postData = {
         title: title,
-        content: content
+        content: content,
     }
-    fetch("http://localhost:3001/api/post", {
+    fetch("http://localhost:3001/api/post/", {
         method: "POST",
         body: JSON.stringify(postData),
         headers: {
