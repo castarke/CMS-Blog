@@ -25,7 +25,7 @@ router.get('/:id',  withAuth, async (req, res) => {
             ]
         }
         )
-        res.status.json(commentData)
+        res.status(200).json(commentData)
     } catch(err){
         res.status(500).json(err)
     }

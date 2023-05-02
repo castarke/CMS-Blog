@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
         });
         const posts = postData.map( singlePost => singlePost.get({plain: true}))
         // console.log(posts)
-        res.status(200).json(posts)
+        // res.status(200).json(posts)
         // console.log('posts: ', posts)
         // res.status(200).json(postData)
         res.render('homepage',{
@@ -60,7 +60,7 @@ router.get('/post/:id', async (req,res)=>{
         )
         const post = postData.get({plain:true});
 
-        res.render('signlepost', {
+        res.render('singlepost', {
             ...post,
             logged_in: req.session.logged_in
         });

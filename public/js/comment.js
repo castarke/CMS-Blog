@@ -7,9 +7,9 @@ document.querySelector("#newComment").addEventListener("submit",event => {
     fetch("/api/comments", {
         method: "POST",
         body: JSON.stringify(comments),
-        // headers:{
-        //     "Content-Type":"application/json"
-        // }
+        headers:{
+            "Content-Type":"application/json"
+        }
     }).then(res => {
         if (res.ok){
             console.log("New comment posted")

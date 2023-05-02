@@ -20,9 +20,9 @@ newPosts.addEventListener("submit",event => {
     fetch("http://localhost:3001/api/posts", {
         method: "POST",
         body: JSON.stringify(postData),
-        // headers: {
-        //     "Content-Type":"application.json"
-        // }
+        headers: {
+            "Content-Type":"application.json"
+        }
     })
     })
 
