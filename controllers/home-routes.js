@@ -5,7 +5,7 @@ router.get('/', async (req, res) => {
     try{  
         // console.log('homepage route reached')
         // const response = await
-        // fetch('http://localhost:3001/api/posts')
+        // fetch('http://localhost:3001/api/post')
         // const postData = await response.json()
         const postData = await Post.findAll({
             attributes:[
@@ -22,13 +22,13 @@ router.get('/', async (req, res) => {
                 ]
             
         });
-        const posts = postData.map( singlePost => singlePost.get({plain: true}))
-        // console.log(posts)
-        // res.status(200).json(posts)
-        // console.log('posts: ', posts)
+        const post = postData.map( singlePost => singlePost.get({plain: true}))
+        // console.log(post)
+        // res.status(200).json(post)
+        // console.log('post: ', post)
         // res.status(200).json(postData)
         res.render('homepage',{
-            posts, 
+            post, 
             login: req.session.login
         })
     } catch(err){

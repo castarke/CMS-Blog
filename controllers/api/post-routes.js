@@ -24,8 +24,8 @@ router.get('/', withAuth, async (req, res) => {
         },
         )
         // console.log('postdata: ', postData)
-        const posts = postData.map(singlePost => singlePost.get({plain: true}))
-        console.log('posts: ', posts)
+        const post = postData.map(singlePost => singlePost.get({plain: true}))
+        console.log('post: ', post)
         res.status(200).json(postData)
     } catch(err){
         res.status(500).json(err)
