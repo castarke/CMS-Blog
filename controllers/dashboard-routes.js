@@ -26,7 +26,7 @@ router.get('/',  withAuth, async (req, res) => {
         singlePost.get({plain: true}));
         res.render('dashboard',{
             posts, 
-            logged_in: req.session.logged_in
+            login: req.session.login
         })
     } catch(err){
         res.status(500).json(err)
@@ -48,7 +48,7 @@ router.get('/edit/:id', withAuth, async (req,res)=>{
 
         res.render('edit-post', {
             ...post,
-            logged_in: req.session.logged_in
+            login: req.session.login
         });
     } catch (err){
         res.status(500).json(err);

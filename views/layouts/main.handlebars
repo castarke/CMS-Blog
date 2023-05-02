@@ -10,15 +10,15 @@
 </head>
 <body>
     <header id="navheader" class="text-white">
-        <section></section>
-        {{#if loggedIn}}
-            <a href="/homepage">Home</a>
+       {{!-- {{console.log(login)}} --}}
+        {{#if logIn}}
+            <a href="/">Home</a>
             <a href="/dashboard">Dashboard</a>
             <a href="/api/user/logout">Logout</a>
         {{else}}
-            <a href="/homepage">Home</a>
+            <a href="/">Home</a>
             <a href="/dashboard">Dashboard</a>
-            <a href="/api/user/login">Login</a>
+            <a href="/login">Login</a>
         {{/if}}  
     </header>
     <main>

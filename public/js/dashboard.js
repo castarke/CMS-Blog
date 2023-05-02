@@ -1,5 +1,5 @@
 let oldPosts = document.querySelector("#oldPosts")
-let newPosts = document.querySelector("#newPosts")
+let newPosts = document.querySelector("#newPost")
 let create = document.querySelector("#create")
 
 newPosts.addEventListener("submit",event => {
