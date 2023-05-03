@@ -3,7 +3,7 @@ let newPost = document.querySelector("#newPost")
 let create = document.querySelector("#create")
 let deletebtn = document.querySelector("#delete")
 
-newPost.addEventListener("submit",event => {
+newPost.addEventListener("submit", async event => {
 
     let title = document.querySelector("#title").value;
     let content = document.querySelector("#content").value;
@@ -19,7 +19,7 @@ newPost.addEventListener("submit",event => {
     //     content: content,
     // }
 
-  fetch(`/api/post`, {
+  await fetch(`/api/post`, {
         method: 'POST',
         body: JSON.stringify({
           title,
