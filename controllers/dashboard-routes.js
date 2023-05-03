@@ -22,10 +22,10 @@ router.get('/',  withAuth, async (req, res) => {
                 ]
             
         });
-        const post = postData.map((singlePost) =>
+        const posts = postData.map((singlePost) =>
         singlePost.get({plain: true}));
         res.render('dashboard',{
-            post, 
+            posts, 
             login: req.session.login
         })
     } catch(err){
