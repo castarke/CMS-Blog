@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');
+const { Post, User, Comment } = require('../models');
 
 router.get('/', async (req, res) => {
     try{  
@@ -39,6 +39,8 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/post/:id', async (req,res)=>{
+
+    console.log(req.params.id)
     try{
         const postData = await Post.findByPk(req.params.id, {
             include: 
@@ -58,13 +60,15 @@ router.get('/post/:id', async (req,res)=>{
             ]
         }
         )
+        console.log(postData)
         const post = postData.get({plain:true});
-
+        console.log(post)
         res.render('singlepost', {
             ...post,
             login: req.session.login
         });
     } catch (err){
+        console.log(err)
         res.status(500).json(err);
     }
 });

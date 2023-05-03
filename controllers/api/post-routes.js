@@ -48,12 +48,15 @@ router.get('/:id', withAuth, async (req, res)=> {
 });
 
 router.post('/', withAuth, async (req, res) => {
+    console.log("made it")
     try{
         const postData = await Post.create({
+
             title:req.body.title,
             content:req.body.content,
-            user_id: req.body.user_id
+            user_id: req.session.user_id
         })
+        console.log(postData)
         res.status(200).json(postData);
     }catch(err){
         console.log(err)

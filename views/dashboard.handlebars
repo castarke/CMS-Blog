@@ -1,12 +1,14 @@
 <h1>Dashboard</h1>
 <section id="post">
-{{#each post}}
+{{#each post as |post|}}
   <section class="card">
       <a href="/post/{{id}}" class="card-body">
         <h3 class="card-title">{{title}}</h3> 
         <h5>Posted on {{createdAt}}</h5>
         <p class="card-text">{{content}}</p>
     </a>
+    <button id ="edit">Edit</button>
+    <button userid="{{id}}" id="delete">Delete</button>
   </section>
 {{/each}}
 </section>
@@ -23,6 +25,7 @@
     <textarea id="content" placeholder="content"></textarea>
     </div>
     <button id="create">Create</button>
+
 </form>
 </div>
 </section>
