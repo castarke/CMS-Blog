@@ -3,67 +3,111 @@
 
 ## Table of Contents
   * config
-    *connection.js     
+    -connection.js     
 
   * controllers
-    *api
-      *comment-routes.js
-      *index.js
-      *post-routes.js
-      *user-routes.js
-    *dashboard-routes.js
-    *homeroutes.js
-    index.js
+    -api
+    
+      -comment-routes.js
+      
+      -index.js
+      
+      -post-routes.js
+      
+      -user-routes.js
+      
+    -dashboard-routes.js
+    
+    -homeroutes.js
+    
+    -index.js
 
   * db
-    *schema.sql
+  
+    -schema.sql
 
   * models
-    *Comment.js
-    *Post.js
-    *User.js
-    *index.js
+  
+    -Comment.js
+    
+    -Post.js
+    
+    -User.js
+    
+    -index.js
 
   * public
-    *css
-      *jass.css
-      *style.css
-    *js
-      *comment.js
-      *dashboard.js
-      *editPost.js
-      *login.js
-      *logout.js
-      *singlePost.js
+  
+    -css
+    
+      -jass.css
+      
+      -style.css
+      
+    -js
+    
+      -comment.js
+      
+      -dashboard.js
+      
+      -editPost.js
+      
+      -login.js
+      
+      -logout.js
+      
+      -singlePost.js
+      
     
   * seeds
-    *comment.js
-    *post.js
-    *seed.js
-    *user.js
+  
+    -comment.js
+    
+    -post.js
+    
+    -seed.js
+    
+    -user.js
+    
 
   * utils
-    *auth.js
-    *helpers.js
+  
+    -auth.js
+    
+    -helpers.js
+    
 
   * views
-    *layouts
-      *main.handlebars
-    *dashboard.handlebars
-    *edit-post.handlebars
-    *homepage.handlebars
-    *login.handlebars
-    *singlepost.handlebars
+  
+    -layouts
+    
+      -main.handlebars
+      
+    -dashboard.handlebars
+    
+    -edit-post.handlebars
+    
+    -homepage.handlebars
+    
+    -login.handlebars
+    
+    -singlepost.handlebars
+    
 
   *gitignore
   
+  
   *README.md
+  
   
   *package-lock.json
   
+  
   *package.json
   
+  
   *server.js
+  
 
 ## Description:
   In this project we created a tech blog where you can share tech insights, thoughts, views, and comment on other people's blog posts. You have the ability to create a user who has the ability to create posts, comment on posts and also update and delete posts.
